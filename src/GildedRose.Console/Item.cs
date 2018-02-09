@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GildedRose.Console
 {
-    class Item
+    public class Item
     {
         public string Name { get; set; }
 

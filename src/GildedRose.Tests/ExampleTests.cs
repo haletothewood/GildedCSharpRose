@@ -123,5 +123,29 @@ namespace GildedRose.Tests
             /*SellIn has reduced to less than zero*/
             Assert.That(app.Items[0].SellIn, Is.EqualTo(-1));
         }
+
+        [Test]
+        public void SulfurasItem_UpdatedQuality()
+        {
+            var items = new List<Item>
+            {
+                new Item {Name = "Sulfuras, Hand of Ragnaros", SellIn = 0, Quality = 80},
+            };
+
+            var app = new Program(items);
+
+            app.UpdateQuality();
+
+            /*Quality never decreases*/
+            for (var i = 0; i < 100; i++)
+            {
+                app.UpdateQuality();
+            }
+
+            Assert.That(app.Items[0].Quality, Is.EqualTo(80));
+
+            /*SellIn never changes from zero*/
+            Assert.That(app.Items[0].SellIn, Is.EqualTo(0));
+        }
     }
 }

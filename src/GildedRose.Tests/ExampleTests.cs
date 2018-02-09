@@ -36,16 +36,46 @@ namespace GildedRose.Tests
             /*Quality reduces at twice the rate if SellIn is less than zero*/
             Assert.That(app.Items[0].Quality, Is.EqualTo(8));
 
-            /*SellIn by 1 each day*/
+            /*SellIn reduces by 1 each day*/
             Assert.That(app.Items[0].SellIn, Is.EqualTo(-1));
 
-            for (int i = 0; i < 100; i++)
+            for (var i = 0; i < 100; i++)
             {
                 app.UpdateQuality();
             }
 
             /*Quality cannot be less than zero*/
             Assert.That(app.Items[0].Quality, Is.EqualTo(0));
+        }
+
+        [Test]
+        public void AgedBrieItem_UpdatedQuality()
+        {
+            var items = new List<Item>
+            {
+                new Item {Name = "Aged Brie", SellIn = 10, Quality = 20},
+            };
+
+            var app = new Program(items);
+
+            app.UpdateQuality();
+
+            /*Quality increases by 1*/
+            Assert.That(app.Items[0].Quality, Is.EqualTo(21));
+
+            /*SellIn reduces by 1*/
+            Assert.That(app.Items[0].SellIn, Is.EqualTo(9));
+
+            for (var i = 0; i < 100; i++)
+            {
+                app.UpdateQuality();
+            }
+
+            /*Quality cannot be more than 50*/
+            Assert.That(app.Items[0].Quality, Is.EqualTo(50));
+
+            /*SellIn reduces by 1 each day*/
+            Assert.That(app.Items[0].SellIn, Is.EqualTo(-91));
         }
     }
 }

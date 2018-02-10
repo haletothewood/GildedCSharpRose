@@ -1,0 +1,44 @@
+﻿<Properties StartupConfiguration="{F2E879A9-7F1C-4C34-AB0D-2662F9815046}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="src/GildedRose.Console/Program.cs">
+    <Files>
+      <File FileName="src/GildedRose.Tests/UpdateQualityTests.cs" Line="145" Column="59" />
+      <File FileName="src/GildedRose.Console/Program.cs" Line="51" Column="26" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="GildedRose" expanded="True">
+            <Node name="Solution Items" expanded="True" />
+            <Node name="GildedRose.Console" expanded="True">
+              <Node name="Packages" expanded="True" />
+              <Node name="Program.cs" selected="True" />
+            </Node>
+            <Node name="GildedRose.Tests" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="GildedRose" expanded="True">
+            <Node name="GildedRose.Tests" expanded="True">
+              <Node name="GildedRose" expanded="True">
+                <Node name="Tests" expanded="True">
+                  <Node name="UpdateItemsTests" expanded="True">
+                    <Node name="SulfurasItem_UpdatedQuality" selected="True" />
+                  </Node>
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.GildedRose.Console PreferredExecutionTarget="MonoDevelop.Default" />
+  <MultiItemStartupConfigurations />
+</Properties>

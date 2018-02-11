@@ -13,9 +13,9 @@ namespace GildedRose.Tests
         [Test]
         public void NormalItem_UpdatedQuality()
         {
-            var items = new List<Item>
+            var items = new List<NormalItem>
             {
-                new Item {Name = "Normal", SellIn = 10, Quality = 20},
+                new NormalItem {Name = "Normal", SellIn = 10, Quality = 20},
             };
 
             var app = new Program(items);
@@ -51,9 +51,9 @@ namespace GildedRose.Tests
         [Test]
         public void AgedBrieItem_UpdatedQuality()
         {
-            var items = new List<Item>
+            var items = new List<NormalItem>
             {
-                new Item {Name = "Aged Brie", SellIn = 10, Quality = 20},
+                new AgedBrie {Name = "Aged Brie", SellIn = 10, Quality = 20},
             };
 
             var app = new Program(items);
@@ -81,9 +81,9 @@ namespace GildedRose.Tests
         [Test]
         public void BackstageItem_UpdatedQuality()
         {
-            var items = new List<Item>
+            var items = new List<NormalItem>
             {
-                new Item {Name = "Backstage passes to a TAFKAL80ETC concert", SellIn = 15, Quality = 6},
+                new NormalItem {Name = "Backstage passes to a TAFKAL80ETC concert", SellIn = 15, Quality = 6},
             };
 
             var app = new Program(items);
@@ -127,9 +127,9 @@ namespace GildedRose.Tests
         [Test]
         public void SulfurasItem_UpdatedQuality()
         {
-            var items = new List<Item>
+            var items = new List<NormalItem>
             {
-                new Item {Name = "Sulfuras, Hand of Ragnaros", SellIn = 0, Quality = 80},
+                new NormalItem {Name = "Sulfuras, Hand of Ragnaros", SellIn = 0, Quality = 80},
             };
 
             var app = new Program(items);

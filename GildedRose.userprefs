@@ -1,8 +1,11 @@
 ﻿<Properties StartupConfiguration="{F2E879A9-7F1C-4C34-AB0D-2662F9815046}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="src/GildedRose.Console/Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="src/GildedRose.Console/AgedBrie.cs">
     <Files>
       <File FileName="src/GildedRose.Tests/UpdateQualityTests.cs" Line="145" Column="59" />
-      <File FileName="src/GildedRose.Console/Program.cs" Line="51" Column="26" />
+      <File FileName="src/GildedRose.Console/Program.cs" Line="21" Column="25" />
+      <File FileName="src/GildedRose.Console/AgedBrie.cs" Line="11" Column="9" />
+      <File FileName="src/GildedRose.Console/Item.cs" Line="11" Column="9" />
+      <File FileName="src/GildedRose.Console/NormalItem.cs" Line="7" Column="10" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -11,7 +14,7 @@
             <Node name="Solution Items" expanded="True" />
             <Node name="GildedRose.Console" expanded="True">
               <Node name="Packages" expanded="True" />
-              <Node name="Program.cs" selected="True" />
+              <Node name="AgedBrie.cs" selected="True" />
             </Node>
             <Node name="GildedRose.Tests" expanded="True" />
           </Node>
@@ -24,7 +27,7 @@
               <Node name="GildedRose" expanded="True">
                 <Node name="Tests" expanded="True">
                   <Node name="UpdateItemsTests" expanded="True">
-                    <Node name="SulfurasItem_UpdatedQuality" selected="True" />
+                    <Node name="AgedBrieItem_UpdatedQuality" selected="True" />
                   </Node>
                 </Node>
               </Node>

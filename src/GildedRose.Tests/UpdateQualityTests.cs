@@ -1,7 +1,4 @@
-using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
 using GildedRose.Console;
 using NUnit.Framework;
 
@@ -18,7 +15,7 @@ namespace GildedRose.Tests
                 new NormalItem {Name = "Normal", SellIn = 10, Quality = 20},
             };
 
-            var app = new Program(items);
+            var app = new TheGildedRose(items);
 
             app.UpdateQuality();
 
@@ -56,7 +53,7 @@ namespace GildedRose.Tests
                 new AgedBrie {Name = "Aged Brie", SellIn = 10, Quality = 20},
             };
 
-            var app = new Program(items);
+            var app = new TheGildedRose(items);
 
             app.UpdateQuality();
 
@@ -83,10 +80,10 @@ namespace GildedRose.Tests
         {
             var items = new List<NormalItem>
             {
-                new NormalItem {Name = "Backstage passes to a TAFKAL80ETC concert", SellIn = 15, Quality = 6},
+                new Backstage {Name = "Backstage passes to a TAFKAL80ETC concert", SellIn = 15, Quality = 6},
             };
 
-            var app = new Program(items);
+            var app = new TheGildedRose(items);
 
             app.UpdateQuality();
 
@@ -110,6 +107,7 @@ namespace GildedRose.Tests
                 app.UpdateQuality();
             }
 
+            Assert.That(app.Items[0].SellIn, Is.EqualTo(4));
             Assert.That(app.Items[0].Quality, Is.EqualTo(24));
 
             /*Quality drops to zero after the concert*/
@@ -132,7 +130,7 @@ namespace GildedRose.Tests
                 new Sulfuras {Name = "Sulfuras, Hand of Ragnaros", SellIn = 0, Quality = 80},
             };
 
-            var app = new Program(items);
+            var app = new TheGildedRose(items);
 
             app.UpdateQuality();
 

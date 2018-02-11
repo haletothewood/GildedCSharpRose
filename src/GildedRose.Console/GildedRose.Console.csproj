@@ -52,6 +52,9 @@
     <Compile Include="AgedBrie.cs" />
     <Compile Include="NormalItem.cs" />
     <Compile Include="Sulfuras.cs" />
+    <Compile Include="Backstage.cs" />
+    <Compile Include="GildedRose.cs" />
+    <Compile Include="ItemGenerator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

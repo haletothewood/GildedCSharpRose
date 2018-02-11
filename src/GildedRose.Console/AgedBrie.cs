@@ -4,8 +4,8 @@ namespace GildedRose.Console
     public class AgedBrie : NormalItem
     {
         public override void Update() {
-            SellIn--;
             UpdateQuality();
+            SellIn--;
         }
 
         private void UpdateQuality()

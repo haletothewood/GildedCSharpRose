@@ -5,17 +5,17 @@ namespace GildedRose.Console
     {
         public virtual void Update()
         {
-            SellIn--;
-            if (!IsPerished()) {
+            if (!Perished()) {
                 Quality--;
                 if (OutOfDate())
                 {
                     Quality--;
                 }
             }
+            SellIn--;
         }
 
-        private bool IsPerished() => Quality == 0;
-        private bool OutOfDate() => SellIn < 0;
+        public bool Perished() => Quality == 0;
+        public bool OutOfDate() => SellIn <= 0;
     }
 }

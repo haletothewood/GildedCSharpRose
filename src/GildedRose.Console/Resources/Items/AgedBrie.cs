@@ -1,5 +1,4 @@
-﻿using System;
-namespace GildedRose.Console
+﻿namespace GildedRose.Console
 {
     public class AgedBrie : NormalItem
     {
@@ -10,11 +9,12 @@ namespace GildedRose.Console
 
         private void UpdateQuality()
         {
-            if (!MaxQuality()) {
+            if (!IsMaxQuality()) {
                 Quality++;
             }
         }
 
-        private bool MaxQuality() => Quality == 50;
+        private const int MAX_QUALITY = 50;
+        private bool IsMaxQuality() => Quality == MAX_QUALITY;
     }
 }

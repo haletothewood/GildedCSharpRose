@@ -4,7 +4,7 @@ namespace GildedRose.Console
 {
     public class ItemGenerator
     {
-        public List<NormalItem> items;
+        private List<NormalItem> items;
 
         public ItemGenerator()
         {

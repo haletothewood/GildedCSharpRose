@@ -1,10 +1,13 @@
 ﻿<Properties StartupConfiguration="{F2E879A9-7F1C-4C34-AB0D-2662F9815046}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="src/GildedRose.Tests/UpdateQualityTests.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="src/GildedRose.Console/ItemGenerator.cs">
     <Files>
-      <File FileName="src/GildedRose.Console/Program.cs" Line="28" Column="13" />
-      <File FileName="src/GildedRose.Tests/UpdateQualityTests.cs" Line="136" Column="40" />
-      <File FileName="src/GildedRose.Console/GildedRose.cs" Line="9" Column="15" />
-      <File FileName="src/GildedRose.Console/ItemGenerator.cs" Line="8" Column="10" />
+      <File FileName="src/GildedRose.Console/Program.cs" Line="20" Column="6" />
+      <File FileName="src/GildedRose.Tests/UpdateQualityTests.cs" Line="1" Column="1" />
+      <File FileName="src/GildedRose.Console/GildedRose.cs" Line="2" Column="1" />
+      <File FileName="src/GildedRose.Console/ItemGenerator.cs" Line="32" Column="1" />
+      <File FileName="src/GildedRose.Console/Conjured.cs" Line="1" Column="1" />
+      <File FileName="src/GildedRose.Console/NormalItem.cs" Line="1" Column="1" />
+      <File FileName="src/GildedRose.Console/AgedBrie.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -13,10 +16,9 @@
             <Node name="Solution Items" expanded="True" />
             <Node name="GildedRose.Console" expanded="True">
               <Node name="Packages" expanded="True" />
+              <Node name="ItemGenerator.cs" selected="True" />
             </Node>
-            <Node name="GildedRose.Tests" expanded="True">
-              <Node name="UpdateQualityTests.cs" selected="True" />
-            </Node>
+            <Node name="GildedRose.Tests" expanded="True" />
           </Node>
         </State>
       </Pad>

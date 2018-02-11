@@ -46,19 +46,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Item.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="AgedBrie.cs" />
-    <Compile Include="NormalItem.cs" />
-    <Compile Include="Sulfuras.cs" />
-    <Compile Include="Backstage.cs" />
-    <Compile Include="GildedRose.cs" />
-    <Compile Include="ItemGenerator.cs" />
+    <Compile Include="Resources\GildedRose.cs" />
+    <Compile Include="Resources\ItemGenerator.cs" />
+    <Compile Include="Resources\Items\AgedBrie.cs" />
+    <Compile Include="Resources\Items\Backstage.cs" />
+    <Compile Include="Resources\Items\Conjured.cs" />
+    <Compile Include="Resources\Items\Item.cs" />
+    <Compile Include="Resources\Items\NormalItem.cs" />
+    <Compile Include="Resources\Items\Sulfuras.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+    <Folder Include="Resources\Items\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

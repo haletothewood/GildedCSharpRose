@@ -5,21 +5,17 @@ namespace GildedRose.Console
     {
         public virtual void Update()
         {
-            DecreaseSellIn();
-            UpdateQuality();
-            if (SellIn < 0) {
-                UpdateQuality();
+            SellIn--;
+            if (!IsPerished()) {
+                Quality--;
+                if (OutOfDate())
+                {
+                    Quality--;
+                }
             }
         }
 
-        private void DecreaseSellIn()
-        {
-            SellIn--;
-        }
-
-        private void UpdateQuality()
-        {
-            Quality--;
-        }
+        private bool IsPerished() => Quality == 0;
+        private bool OutOfDate() => SellIn < 0;
     }
 }

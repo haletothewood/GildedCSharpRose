@@ -4,15 +4,11 @@ namespace GildedRose.Console
     public class AgedBrie : NormalItem
     {
         public override void Update() {
-            DecreaseSellIn();
-            IncrementQuality();
-        }
-
-        private void DecreaseSellIn() {
             SellIn--;
+            UpdateQuality();
         }
 
-        private void IncrementQuality()
+        private void UpdateQuality()
         {
             if (!MaxQuality()) {
                 Quality++;

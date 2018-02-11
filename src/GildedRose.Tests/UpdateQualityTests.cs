@@ -129,7 +129,7 @@ namespace GildedRose.Tests
         {
             var items = new List<NormalItem>
             {
-                new NormalItem {Name = "Sulfuras, Hand of Ragnaros", SellIn = 0, Quality = 80},
+                new Sulfuras {Name = "Sulfuras, Hand of Ragnaros", SellIn = 0, Quality = 80},
             };
 
             var app = new Program(items);

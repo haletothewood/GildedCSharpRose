@@ -1,10 +1,17 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace GildedRose.Console
 {
     public class Program
     {
         public IList<NormalItem> Items;
+
+        public string[] SpecialItemsNames = new string[] {
+            "Aged Brie",
+            "Sulfuras, Hand of Ragnaros",
+            "Backstage passes to a TAFKAL80ETC concert"
+        };
 
         public Program(List<NormalItem> items)
         {
@@ -41,13 +48,16 @@ namespace GildedRose.Console
         {
 
             for (var i = 0; i < Items.Count; i++)
-                switch (Items[i].Name)
+                if (Items[i].Name == "Aged Brie" || Items[i].Name.Contains("Sulfuras"))
                 {
-                    case "Aged Brie":
-                        Items[i].Update();
-                        break;
-                    default:
-                        if (Items[i].Name != "Backstage passes to a TAFKAL80ETC concert")
+                    Items[i].Update();
+                }
+                else if (!(SpecialItemsNames.Contains(Items[i].Name)))
+                {
+                    Items[i].Update();
+                }
+                else {
+                    if (Items[i].Name != "Backstage passes to a TAFKAL80ETC concert")
                         {
                             if (Items[i].Quality > 0)
                             {
@@ -106,7 +116,6 @@ namespace GildedRose.Console
                                 Items[i].Quality = Items[i].Quality - Items[i].Quality;
                             }
                         }
-                        break;
 
                 }
         }

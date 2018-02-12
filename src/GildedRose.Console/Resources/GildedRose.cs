@@ -11,11 +11,11 @@ namespace GildedRose.Console
             Items = items;
         }
 
-        public void UpdateQuality()
+        public void Update()
         {
-            for (var i = 0; i < Items.Count; i++)
+            foreach (var item in Items)
             {
-                Items[i].Update();
+                item.Update();
             }
         }
     }

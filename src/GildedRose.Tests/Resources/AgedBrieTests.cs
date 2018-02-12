@@ -2,21 +2,19 @@
 using GildedRose.Console;
 using NUnit.Framework;
 
-namespace GildedRose.Tests
+namespace GildedRose.Tests.Resources
 {
     [TestFixture]
     public class AgedBrieTests
     {
-        public TheGildedRose shop;
-
         [Test]
-        public void UpdateQuality_ByOne()
+        public void UpdateQuality_IncreaseByOne()
         {
             var shop = new TheGildedRose(new List<NormalItem>
                 {
                     new AgedBrie {Name = "Aged Brie", SellIn = 10, Quality = 20},
                 });
-            shop.UpdateQuality();
+            shop.Update();
             Assert.That(shop.Items[0].Quality, Is.EqualTo(21));
         }
 
@@ -27,7 +25,7 @@ namespace GildedRose.Tests
                 {
                     new AgedBrie {Name = "Aged Brie", SellIn = 10, Quality = 20},
                 });
-            shop.UpdateQuality();
+            shop.Update();
             Assert.That(shop.Items[0].SellIn, Is.EqualTo(9));
         }
 
@@ -41,7 +39,7 @@ namespace GildedRose.Tests
 
             for (var i = 0; i < 100; i++)
             {
-                shop.UpdateQuality();
+                shop.Update();
             }
 
             Assert.That(shop.Items[0].Quality, Is.EqualTo(50));

@@ -8,11 +8,11 @@ namespace GildedRose.Console
         {
             System.Console.WriteLine("OMGHAI!");
 
-            var Itinerary = new ItemGenerator();
+            var itinerary = new ItemGenerator();
 
-            var Shop = new TheGildedRose(Itinerary.GetList());
+            var shop = new TheGildedRose(itinerary.GetList());
 
-            Shop.UpdateQuality();
+            shop.Update();
 
             System.Console.ReadKey();
         }

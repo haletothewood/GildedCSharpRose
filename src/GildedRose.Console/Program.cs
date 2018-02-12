@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+﻿using GildedRose.Console.Resources.Items;
 
 namespace GildedRose.Console
 {

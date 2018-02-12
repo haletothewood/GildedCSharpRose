@@ -1,4 +1,4 @@
-﻿namespace GildedRose.Console
+﻿namespace GildedRose.Console.Resources.Items
 {
     public class NormalItem : Item
     {
@@ -14,8 +14,8 @@
             SellIn--;
         }
 
-        private const int BEST_BEFORE = 0;
-        public bool Perished() => Quality == BEST_BEFORE;
+        private const int BestBefore = 0;
+        public bool Perished() => Quality == BestBefore;
         public bool OutOfDate() => SellIn <= 0;
     }
 }

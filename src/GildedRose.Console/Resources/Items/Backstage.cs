@@ -1,5 +1,4 @@
-﻿using System;
-namespace GildedRose.Console
+﻿namespace GildedRose.Console.Resources.Items
 {
     public class Backstage : NormalItem
     {

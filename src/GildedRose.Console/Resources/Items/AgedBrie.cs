@@ -1,4 +1,4 @@
-﻿namespace GildedRose.Console
+﻿namespace GildedRose.Console.Resources.Items
 {
     public class AgedBrie : NormalItem
     {

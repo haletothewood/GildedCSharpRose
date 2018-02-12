@@ -4,11 +4,11 @@ namespace GildedRose.Console.Resources.Items
 {
     public class ItemGenerator
     {
-        private List<NormalItem> items;
+        private readonly List<NormalItem> _items;
 
         public ItemGenerator()
         {
-            items = new List<NormalItem>
+            _items = new List<NormalItem>
             {
                 new NormalItem {Name = "+5 Dexterity Vest", SellIn = 10, Quality = 20},
                 new AgedBrie {Name = "Aged Brie", SellIn = 2, Quality = 0},
@@ -25,7 +25,7 @@ namespace GildedRose.Console.Resources.Items
         }
 
         public List<NormalItem> GetList(){
-            return items;
+            return _items;
         }
     }
 }

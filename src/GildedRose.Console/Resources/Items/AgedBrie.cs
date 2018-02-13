@@ -14,7 +14,7 @@
             }
         }
 
-        private const int MAX_QUALITY = 50;
-        private bool IsMaxQuality() => Quality == MAX_QUALITY;
+        private const int MaxQuality = 50;
+        private bool IsMaxQuality() => Quality == MaxQuality;
     }
 }

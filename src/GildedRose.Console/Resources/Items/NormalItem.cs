@@ -2,6 +2,9 @@
 {
     public class NormalItem : Item
     {
+        private const int MinimumQuality = 0;
+        private const int SellByDate = 0;
+
         public virtual void Update()
         {
             if (!Perished()) {
@@ -13,9 +16,7 @@
             }
             SellIn--;
         }
-
-        private const int BestBefore = 0;
-        public bool Perished() => Quality == BestBefore;
-        public bool OutOfDate() => SellIn <= 0;
+        public bool Perished() => Quality == MinimumQuality;
+        public bool OutOfDate() => SellIn <= SellByDate;
     }
 }

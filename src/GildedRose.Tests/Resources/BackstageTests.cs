@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using GildedRose.Console;
+using GildedRose.Console.Resources.Items;
 using NUnit.Framework;
 
 namespace GildedRose.Tests.Resources

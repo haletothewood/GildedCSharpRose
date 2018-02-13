@@ -1,31 +1,34 @@
+﻿using System;
 using System.Collections.Generic;
-using GildedRose.Console;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using GildedRose.Console.Resources.Items;
 using NUnit.Framework;
 
 namespace GildedRose.Tests.Resources
 {
     [TestFixture]
-    public class UpdateItemsTests
+    public class ConjuredItemTests
     {
         [Test]
         public void UpdatedQuality_ReduceByOne()
         {
             var shop = new TheGildedRose(new List<NormalItem>
             {
-                new NormalItem {Name = "Normal", SellIn = 10, Quality = 20},
+                new Conjured {Name = "Conjured", SellIn = 10, Quality = 20},
             });
             shop.Update();
 
-            Assert.That(shop.Items[0].Quality, Is.EqualTo(19));
+            Assert.That(shop.Items[0].Quality, Is.EqualTo(18));
         }
 
         [Test]
-        public void UpdatedSellIn_ReduceByOne()
+        public void UpdatedSellIn_ReduceByTwo()
         {
             var shop = new TheGildedRose(new List<NormalItem>
             {
-                new NormalItem {Name = "Normal", SellIn = 10, Quality = 20},
+                new Conjured {Name = "Conjured", SellIn = 10, Quality = 20},
             });
             shop.Update();
 
@@ -33,11 +36,11 @@ namespace GildedRose.Tests.Resources
         }
 
         [Test]
-        public void UpdatedQuality_ReducesbyTwoIfSellInExpired()
+        public void UpdatedQuality_ReducesbyFourIfSellInExpired()
         {
             var shop = new TheGildedRose(new List<NormalItem>
             {
-                new NormalItem {Name = "Normal", SellIn = 10, Quality = 20},
+                new Conjured {Name = "Conjured", SellIn = 10, Quality = 40},
             });
 
             for (var i = 0; i < 11; i++)
@@ -45,7 +48,7 @@ namespace GildedRose.Tests.Resources
                 shop.Update();
             }
 
-            Assert.That(shop.Items[0].Quality, Is.EqualTo(8));
+            Assert.That(shop.Items[0].Quality, Is.EqualTo(16));
         }
 
         [Test]
@@ -53,7 +56,7 @@ namespace GildedRose.Tests.Resources
         {
             var shop = new TheGildedRose(new List<NormalItem>
             {
-                new NormalItem {Name = "Normal", SellIn = 10, Quality = 20},
+                new Conjured {Name = "Conjured", SellIn = 10, Quality = 20},
             });
 
             for (var i = 0; i < 100; i++)
@@ -62,6 +65,6 @@ namespace GildedRose.Tests.Resources
             }
 
             Assert.That(shop.Items[0].Quality, Is.EqualTo(0));
-        }   
+        }
     }
 }

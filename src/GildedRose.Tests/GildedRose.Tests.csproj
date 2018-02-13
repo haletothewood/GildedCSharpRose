@@ -46,6 +46,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Resources\ConjuredTests.cs" />
     <Compile Include="Resources\AgedBrieTests.cs" />
     <Compile Include="Resources\BackstageTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

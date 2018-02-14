@@ -2,6 +2,8 @@
 {
     public class AgedBrie : NormalItem
     {
+        private const int MaxQuality = 50;
+
         public override void Update() {
             UpdateQuality();
             SellIn--;
@@ -14,7 +16,6 @@
             }
         }
 
-        private const int MaxQuality = 50;
         private bool IsMaxQuality() => Quality == MaxQuality;
     }
 }

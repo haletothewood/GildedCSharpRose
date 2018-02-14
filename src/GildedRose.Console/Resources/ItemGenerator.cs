@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
+using GildedRose.Console.Resources.Items;
 
-namespace GildedRose.Console.Resources.Items
+namespace GildedRose.Console.Resources
 {
     public class ItemGenerator
     {

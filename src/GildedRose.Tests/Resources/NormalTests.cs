@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using GildedRose.Console.Resources;
 using GildedRose.Console.Resources.Items;
 using NUnit.Framework;
@@ -24,7 +25,7 @@ namespace GildedRose.Tests.Resources
         { 
             Shop.Update();
 
-            Assert.That(Shop.Items[0].Quality, Is.EqualTo(19));
+            Assert.That(Shop.Items.First().Quality, Is.EqualTo(19));
         }
 
         [Test]
@@ -32,7 +33,7 @@ namespace GildedRose.Tests.Resources
         {
             Shop.Update();
 
-            Assert.That(Shop.Items[0].SellIn, Is.EqualTo(9));
+            Assert.That(Shop.Items.First().SellIn, Is.EqualTo(9));
         }
 
         [Test]
@@ -44,7 +45,7 @@ namespace GildedRose.Tests.Resources
                 Shop.Update();
             }
 
-            Assert.That(Shop.Items[0].Quality, Is.EqualTo(8));
+            Assert.That(Shop.Items.First().Quality, Is.EqualTo(8));
         }
 
         [Test]
@@ -55,7 +56,7 @@ namespace GildedRose.Tests.Resources
                 Shop.Update();
             }
 
-            Assert.That(Shop.Items[0].Quality, Is.EqualTo(0));
+            Assert.That(Shop.Items.First().Quality, Is.EqualTo(0));
         }   
     }
 }

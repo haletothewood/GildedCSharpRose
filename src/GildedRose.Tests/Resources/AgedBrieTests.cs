@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using GildedRose.Console.Resources;
 using GildedRose.Console.Resources.Items;
 using NUnit.Framework;
@@ -8,12 +9,12 @@ namespace GildedRose.Tests.Resources
     [TestFixture]
     public class AgedBrieTests
     {
-        public TheGildedRose Shop;
+        private TheGildedRose _shop;
 
         [SetUp]
         public void Init()
         {
-            Shop = new TheGildedRose(new List<NormalItem>
+            _shop = new TheGildedRose(new List<NormalItem>
             {
                 new AgedBrie {Name = "Aged Brie", SellIn = 10, Quality = 20},
             });
@@ -22,15 +23,15 @@ namespace GildedRose.Tests.Resources
         [Test]
         public void UpdateQuality_IncreaseByOne()
         {
-            Shop.Update();
-            Assert.That(Shop.Items[0].Quality, Is.EqualTo(21));
+            _shop.Update();
+            Assert.That(_shop.Items.First().Quality, Is.EqualTo(21));
         }
 
         [Test]
         public void UpdateSellIn_ReduceByOne()
         {
-            Shop.Update();
-            Assert.That(Shop.Items[0].SellIn, Is.EqualTo(9));
+            _shop.Update();
+            Assert.That(_shop.Items.First().SellIn, Is.EqualTo(9));
         }
 
         [Test]
@@ -38,10 +39,10 @@ namespace GildedRose.Tests.Resources
         {
             for (var i = 0; i < 100; i++)
             {
-                Shop.Update();
+                _shop.Update();
             }
 
-            Assert.That(Shop.Items[0].Quality, Is.EqualTo(50));
+            Assert.That(_shop.Items.First().Quality, Is.EqualTo(50));
         }
     }
 }

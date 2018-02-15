@@ -1,4 +1,8 @@
-﻿using GildedRose.Console.Resources.Items;
+﻿using System;
+using System.Collections.Generic;
+using System.Runtime.CompilerServices;
+using GildedRose.Console.Resources;
+using GildedRose.Console.Resources.Items;
 
 namespace GildedRose.Console
 {
@@ -10,12 +14,11 @@ namespace GildedRose.Console
 
             var itinerary = new ItemGenerator();
 
-            var shop = new TheGildedRose(itinerary.GetList());
+            var shop = new TheGildedRose(itinerary.Items);
 
             shop.Update();
 
             System.Console.ReadKey();
         }
-
     }
 }

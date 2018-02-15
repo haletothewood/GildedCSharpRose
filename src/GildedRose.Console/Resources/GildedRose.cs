@@ -5,9 +5,9 @@ namespace GildedRose.Console.Resources
 {
     public class TheGildedRose
     {
-        public IList<NormalItem> Items;
+        public IEnumerable<NormalItem> Items;
 
-        public TheGildedRose(IList<NormalItem> items)
+        public TheGildedRose(IEnumerable<NormalItem> items)
         {
             Items = items;
         }
